@@ -1,0 +1,12 @@
+package main
+import (
+    "fmt"
+    "strings"
+)
+func main() {
+    str := "Hello Go programming"
+    fmt.Println("Contains 'Go':", strings.Contains(str, "Go"))
+    fmt.Println("Contains any of 'xyz':", strings.ContainsAny(str, "xyz"))
+    fmt.Println("Count of 'o':", strings.Count(str, "o"))
+    fmt.Println("EqualFold:", strings.EqualFold("Hello", "hello"))
+}
