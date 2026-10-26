@@ -1,0 +1,22 @@
+package main
+import (
+    "fmt"
+    "math"
+)
+func main() {
+    var numbers [10]float64
+    var sum, mean, variance, sd float64
+    fmt.Println("enter 10 numbers")
+    for i := 0; i < 10; i++ {
+        fmt.Scan(&numbers[i])
+        sum += numbers[i]
+    }
+    mean = sum / 10
+    for i := 0; i < 10; i++ {
+        variance += math.Pow(numbers[i]-mean, 2)
+    }
+    variance = variance / 10
+    sd = math.Sqrt(variance)
+    fmt.Printf("mean = %.1f\n", mean)
+    fmt.Printf("standard deviation = %.3f\n", sd)
+}
