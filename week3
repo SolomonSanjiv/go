@@ -1,0 +1,24 @@
+file1:
+package solomon
+type Student struct {
+    Name   string
+    Roll   int
+    Branch string
+}
+
+file2:
+package main
+import (
+    "fmt"
+    "week3/solomon"
+)
+func main() {
+    s := solomon.Student{
+        Roll:   101,
+        Name:   "solomon",
+        Branch: "CSE",
+    }
+    fmt.Println(s.Roll)
+    fmt.Println(s.Name)
+    fmt.Println(s.Branch)
+}
