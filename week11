@@ -1,0 +1,19 @@
+package main
+import (
+    "fmt"
+    "sort"
+)
+func main() {
+    numbers := []int{80, 20, 40, 10, 30, 60}
+    fmt.Println("Original integers:", numbers)
+    sort.Ints(numbers)
+    fmt.Println("Sorted integers:", numbers)
+    sort.Sort(sort.Reverse(sort.IntSlice(numbers)))
+    fmt.Println("Reversed integers:", numbers)
+    names := []string{"Farhan", "Saranya", "Ashish", "Prichai", "Thame", "SaranyaWithHathai"}
+    fmt.Println("Original strings:", names)
+    sort.Strings(names)
+    fmt.Println("Sorted strings:", names)
+    sort.Sort(sort.Reverse(sort.StringSlice(names)))
+    fmt.Println("Reversed strings:", names)
+}
