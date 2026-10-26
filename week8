@@ -1,0 +1,31 @@
+package main
+import "fmt"
+type contact struct {
+    Name    string
+    email   string
+    Phone   string
+    message string
+}
+func main() {
+    var name, emailId, phoneNum, message string
+    fmt.Println("contact form")
+    fmt.Println("Enter Name")
+    fmt.Scan(&name)
+    fmt.Println("Enter Email id")
+    fmt.Scan(&emailId)
+    fmt.Println("Enter Phone Number")
+    fmt.Scan(&phoneNum)
+    fmt.Println("Enter Message")
+    fmt.Scan(&message)
+    Contact := contact{
+        Name:    name,
+        email:   emailId,
+        Phone:   phoneNum,
+        message: message,
+    }
+    fmt.Println("\ncontact Details")
+    fmt.Println("Name:", Contact.Name)
+    fmt.Println("Email:", Contact.email)
+    fmt.Println("Phone:", Contact.Phone)
+    fmt.Println("message:", Contact.message)
+}
